@@ -29,7 +29,8 @@ export default function JumbleWordGame() {
       ) {
         throw new Error("Data is not an array of strings.");
       }
-      setWords(parsed);
+      const lowercased = parsed.map((word: string) => word.toLowerCase());
+      setWords(lowercased);
       setGameStarted(true);
       setIndex(0);
       setShowAnswer(false);
